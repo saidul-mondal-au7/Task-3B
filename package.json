@@ -10,6 +10,7 @@
   "author": "Saidul Mondal",
   "license": "ISC",
   "dependencies": {
+    "bad-words": "^3.0.3",
     "express": "^4.17.1",
     "socket.io": "^3.0.1"
   },
