@@ -82,15 +82,8 @@ First up, install the module.
 serving up client-side assets, both Express and Socket.io will get set up. The server file
 below shows how to get this done.
 
-Version 1.0
-
-109
-
-
-
-
-
-const path = require('path')
+```js
+  const path = require('path')
 
 const http = require('http')
 
@@ -128,6 +121,9 @@ server.listen(port, () => {
 
 console.log(`Server is up on port ${port}!`)
 
+
+```
+
 The server above uses io.onwhich is provided by Socket.io. onallows the server to listen
 
 for an event and respond to it. In the example above, the server listens for connection
@@ -141,23 +137,17 @@ Socket.io is also used on the client to connect to the server. Socket.io automat
 up /socket.io/socket.io.jswhich contains the client-side code. The script tags below
 
 load in the client-side library followed by a custom JavaScript file.
+```html
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="/js/chat.js"></script>
+```
 
-<script src="/socket.io/socket.io.js"></script>
 
-<script src="/js/chat.js"></script>
-
-Your client-side JavaScript can then connect to the Socket.io server by calling io. iois
+Client-side JavaScript can then connect to the Socket.io server by calling io. iois
 
 provided by the client-side Socket.io library. Calling this function will set up the connection,
 
 and it’ll cause the server’s connectionevent handler to run.
-
-Version 1.0
-
-110
-
-
-
 
 
 io()
